@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>好きなことログ & To Do デモ</title>
+  <link rel="stylesheet" href="assets/style.css" />
+</head>
+<body>
+  <button class="dark-toggle" onclick="toggleDarkMode()">🌙 切替</button>
+  <h1>🎉 好きなことログ & To Do リスト（デモ版）</h1>
+
+  <label for="templateSelect">テンプレート選択：</label>
+  <select id="templateSelect" onchange="switchTemplate(this.value)">
+    <option value="default">🎫 標準テンプレート</option>
+    <option value="musical">🎵 舞台・ミュージカル</option>
+    <option value="concert">🎤 ライブ・コンサート</option>
+  </select>
+
+  <section class="event-info">
+    <h2>🎫 公演情報</h2>
+    <label>タイトル：<input type="text" id="title" name="title" placeholder="例：モーツァルト" disabled></label>
+    <label>会場：<input type="text" id="venue" name="venue" disabled></label>
+    <label>日時：<input type="text" id="date" name="date" disabled></label>
+    <label>キャスト：<textarea id="cast" name="cast" disabled></textarea></label>
+  </section>
+
+  <section class="todo-list">
+    <h2>🧳 観劇前のTo Doリスト</h2>
+    <ul id="todo"></ul>
+    <div class="todo-controls">
+      <button onclick="addTodo()">＋項目追加</button>
+    </div>
+  </section>
+
+  <section class="memo-section">
+    <h2>📝 観劇後メモ（入力可）</h2>
+    <textarea id="memo" name="memo" rows="6" placeholder="作品の感想などを自由に書いてください"></textarea>
+  </section>
+
+  <footer class="footer">
+    <p>これは体験用のデモです。保存や画像機能は本編にてご利用いただけます。</p>
+    <p>© 2025 code.achsh@gmail.com</p>
+  </footer>
+
+  <script src="assets/javascript.js"></script>
+</body>
+</html>
