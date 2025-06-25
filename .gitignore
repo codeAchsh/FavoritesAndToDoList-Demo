@@ -1,0 +1,23 @@
+# macOS / Windowsの不要ファイル
+.DS_Store
+Thumbs.db
+
+# VSCodeなどの設定ファイル
+.vscode/
+.idea/
+
+# 不要なログ
+*.log
+*.tmp
+*.bak
+
+# アップロードされた画像（販売用には含めない）
+assets/uploads/
+assets/images/sample_photo.jpg
+
+# ZIPファイルなど一時生成物
+*.zip
+*.rar
+
+# Node.js用（未使用でも念のため）
+node_modules/
